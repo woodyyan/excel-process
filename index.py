@@ -1,4 +1,4 @@
-from os import path
+import sys
 from shutil import copyfile
 
 from openpyxl import load_workbook
@@ -53,5 +53,7 @@ class People:
 
 
 if __name__ == '__main__':
-    process('20220330175209684(1).xlsx',
-            '自然人.xlsx')
+    print('参数列表:', str(sys.argv))
+    print(sys.argv[1])
+    print(sys.argv[2])
+    process(sys.argv[1], sys.argv[2])
