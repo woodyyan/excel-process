@@ -54,6 +54,9 @@ class People:
 
 if __name__ == '__main__':
     print('参数列表:', str(sys.argv))
+    if len(sys.argv) < 3:
+        print('请传入源文件和目标文件路径')
+        exit()
     print(sys.argv[1])
     print(sys.argv[2])
     process(sys.argv[1], sys.argv[2])
